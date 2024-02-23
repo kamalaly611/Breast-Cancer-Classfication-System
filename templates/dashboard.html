@@ -1,0 +1,62 @@
+{% extends 'user_layout.html' %}
+
+
+{% block body %}
+<!--Websitre Overview-->
+<div class="panel panel-default light-shadow hidden-xs hidden-sm" style='border:1px #f78eb2; solid'>
+ <div class="panel-heading" style='background:#f78eb2;color:#f78eb2;'>
+   <h4 class="panel-title">System Overview</h4>
+ </div>
+ <div class="panel-body">
+  <div class="col-md-4 col-xs-4">
+    <div class="well well-primary">
+        <h2 class="text-center"><span class="glyphicon glyphicon-list-alt"></span> <span id="patient_no">{{patients}}</span></h2>
+        <h4 class="text-center">Patients</h4>
+    </div>
+  </div>
+  <div class="col-md-4 col-xs-4">
+    <div class="well well-success">
+        <h2 class="text-center"><span class="glyphicon glyphicon-stats"></span> <span id="report_no">{{reports}}</span></h2>
+        <h4 class="text-center">Results</h4>
+    </div>
+  </div>
+  <div class="col-md-4 col-xs-4">
+    <div class="well well-warning">
+        <h2 class="text-center"><span class="fa fa-search"></span></h2>
+        <h4 class="text-center">Analysis</h4>
+    </div>
+  </div>
+
+ </div>
+</div>
+
+<div class="panel panel-default light-shadow" style='border:1px #f3f3f3 solid;'>
+ <div class="panel-heading" style='background:#f78eb2;color:#fff;'>
+    <h4 class="panel-title">All Patients</h4>
+  </div>
+  <div class="panel-body">
+  <div class='table-responsive'>
+   <table class="table table-striped table-hover">
+     <tr>
+       <th>Patient ID</th>
+       <th>Name</th>
+       <th>Date of Birth</th>
+       <th>Gender</th>
+       <th>Created At</th>
+     </tr>
+
+     {% for patient in patient_records%}
+     <tr>
+       <td>{{patient.p_id2}}</td>
+       <td>{{patient.p_name}}</td>
+       <td>{{patient.p_dob}}</td>
+       <td>{{patient.p_gender}}</td>
+       <td>{{patient.time_added}}</td>
+    </tr>
+    {% endfor %}
+   </table>
+  </div>
+  </div>
+</div>
+
+{% endblock %}

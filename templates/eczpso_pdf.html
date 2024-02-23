@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>EczPsoC PDF</title>
+
+    <!-- Including CSS and Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style media="screen">
+        *
+        {
+          font-family:Segoe UI;
+        }
+    </style>
+  </head>
+  <body>
+      <div class="container">
+          <h1 class='text-center' style='text-decoration:underline solid #000;margin-bottom:50px;'>Breast Cancer Classification Report</h1>
+          <div class="row"  style='margin-bottom:50px;'>
+            <div class="col-md-4">
+
+            </div>
+            <div class="col-md-4">
+
+            </div>
+            <div class="col-md-4">
+            </div>
+          </div>
+          <div class="row"  style='margin-bottom:50px;'>
+            <div class="col-md-12">
+                <table class='table table-condensed'>
+                  <tr>
+                    <th>Patient ID</th>
+                    <th>Name</th>
+                    <th>Date of Birth</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                  </tr>
+                  <tr>
+                    <td>{{id}}</td>
+                    <td>{{name}}</td>
+                    <td>{{dob}}</td>
+                    <td>{{age}}</td>
+                    <td>{{gender}}</td>
+                  </tr>
+                </table>
+            </div>
+          </div>
+
+          <p class='text-left'><b>Report created at :</b> {{time_added}}</p>
+
+          <table class='table' style='margin-bottom:40px;'>
+            <tr>
+              <th>Test Name</th>
+              <th>Result</th>
+            </tr>
+            <tr>
+              <td>Breast Cancer Classification</td>
+              <td>{{pred}}</td>
+            </tr>
+          </table>
+
+
+          
+          <div class="clearfix"></div>
+
+
+          <h4><b>Description</b></h4>
+          {% if pred == 'Maligent'%}
+          <p>Malignant cancer: abnormal cell growth, potential to invade tissues, life-threatening if untreated. Requires immediate medical intervention: surgery, radiation, chemotherapy, targeted therapy, immunotherapy. Early detection and consultation with healthcare professionals are crucial.</p>
+          {% elif pred == 'Begin'%}
+          <p>Benign tumors: non-cancerous growths, localized and non-invasive. May require medical intervention for discomfort. Regular monitoring recommended for management.</p>
+          {% endif %}
+      </div>
+      
+  </body>
+</html>
