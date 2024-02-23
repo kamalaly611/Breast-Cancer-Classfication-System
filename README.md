@@ -32,27 +32,56 @@ To run this system, several technologies and dependencies need to be installed:
 
 ### Installing Dependencies
 - Inside the virtual environment, install all required Python libraries.
-
-## Usage
-(Here, you can provide instructions on how to use your system, including starting the server, accessing the interface, etc.)
-
+- Ensure Python and Flask are installed on your system.
+- Clone the repository or download the source code.
+-Install required dependencies listed in `requirements.txt`.
+- Set up a MySQL database and configure the connection in the application.
 ## Technologies Used
 - Frontend: HTML, CSS, JavaScript
 - Backend: Flask
 - Machine Learning Model: VGG-16 (CNN Architecture)
 - Database: SQL
 
+
+
+
+#Usage
+Run the Flask app to start the server. Access the application through a web browser to register users, manage patient data, classify medical images, and generate reports.
+
+## Features
+- User and patient management.
+- Medical image classification using TensorFlow and Keras.
+- Email functionalities for notifications.
+- Dynamic PDF generation for reports and diagnostics.
+- Comprehensive forms for data entry and validation.
+
 ## Dependencies
-(Here, list all the Python libraries and any other dependencies required for the project.)
+- Flask
+- TensorFlow and Keras
+- Flask-Mail
+- MySQL
+- pdfkit and wkhtmltopdf
+- Additional Python libraries.
 
 ## Configuration
-(Provide details on how to configure the system, if necessary.)
+Configure the MySQL database settings, email server details, and file upload paths as per your environment.
 
-## Database Setup
-Instructions for setting up the database using XAMPP.
+## Documentation
+The source code contains comments for easier understanding of the functionalities. Ensure to read the Flask and TensorFlow documentation for detailed understanding.
 
-## Contributing
-(Instructions for how others can contribute to the project, if applicable.)
+## Examples
+- Registering a new user or patient.
+- Classifying a medical image to detect specific conditions.
+- Generating PDF reports for patient history and diagnostics.
 
-## License
-(Include the project's license information here.)
+## Troubleshooting
+- Ensure all Python dependencies are installed.
+- Verify the database and email configurations.
+- Check for errors in the Flask server logs.
+
+## Contributors
+- Kamal Hussain (Developer)
+
+
+
+
