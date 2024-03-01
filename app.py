@@ -573,7 +573,7 @@ def forgot():
             #starts up server
             server.starttls()
 
-            server.login('etopiyaaly611@gmail.com','urarwegdqasqosea')
+            server.login('etopiyaaly611@gmail.com','Suppose your token of email')
             server.sendmail('email',email,message)
             # Close connection
             cur.close()
